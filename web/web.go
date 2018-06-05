@@ -131,7 +131,7 @@ func format(v *registry.Value) string {
 
 func formatEndpoint(v *registry.Value, r int) string {
 	// default format is tabbed plus the value plus new line
-	fparts := []string{"", "%s %s", "\n"}
+	fParts := []string{"", "%s %s", "\n"}
 	for i := 0; i < r+1; i++ {
 		fparts[0] += "\t"
 	}
@@ -141,7 +141,7 @@ func formatEndpoint(v *registry.Value, r int) string {
 	}
 
 	// this thing has more things, it's complex
-	fparts[1] += " {"
+	fParts[1] += " {"
 
 	vals := []interface{}{snaker.CamelToSnake(v.Name), v.Type}
 
